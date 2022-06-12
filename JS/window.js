@@ -1,10 +1,21 @@
-let game = new Game();
+    /**
+     * [
+     *  se instancia el objeto juego para iniciar ademas contiene el color de la ventana
+     *  y la funsion que inicia el juego
+     * ]
+     * @version [1,0.0]
+     *
+     * @author [Yeferson Valencia, alejandro.yandd@gmail.com]
+     *
+     */
 
-function setup() {
-    createCanvas(windowWidth - 20, windowHeight - 20);
-}
+    let game = new Game();
 
-function draw() {
-    background('#037167');
-    game.display();
-}
+    function setup() {
+        createCanvas(windowWidth - 20, windowHeight - 20);
+    }
+
+    function draw() {
+        background('#037167');
+        game.display();
+    }
