@@ -1,7 +1,7 @@
 /**
  * [
- *  contiene la clase player donde se encuentra funsion displey 
- *  puntaje, mostrar puntaje y reiniciar 
+ *  contiene la clase player contiene sus costructor funciones(metodos)
+ * 
  * ]
  * @version [1,0.0]
  *
@@ -9,7 +9,16 @@
  * @since [1,0,0]
  *
  */
-class player {
+class Player {
+    /**
+     * [
+     *  contiene el constructor de los jugadores
+     * ]
+     * @version [1,0.0]
+     *
+     * @author [Yeferson Valencia, alejandro.yandd@gmail.com]
+     *
+     */
 
     constructor(player, yInitial, x1, x2, limitUp, limitDown) {
         this.player = player;
@@ -26,6 +35,15 @@ class player {
         this.position();
     }
 
+    /**
+     * [
+     *  contiene el llamdado metodo  para pintar el movimiento y la collicion fill blanco
+     * ]
+     * @version [1,0.0]
+     *
+     * @author [Yeferson Valencia, alejandro.yandd@gmail.com]
+     *
+     */
     display() {
         fill('white');
         rect(this.x, this.y, 10, 100);
@@ -33,6 +51,15 @@ class player {
         this.collision();
     }
 
+    /**
+     * [
+     *  contiene el metodo de la posicion de los jugadores
+     * ]
+     * @version [1,0.0]
+     *
+     * @author [Yeferson Valencia, alejandro.yandd@gmail.com]
+     *
+     */
     position() {
         if (this.player == 1) {
             this.x = this.x1;
@@ -43,6 +70,16 @@ class player {
         }
     }
 
+
+    /**
+     * [
+     *  contiene el metodo del calculo del movimiento y las instrucciones del teclado
+     * ]
+     * @version [1,0.0]
+     *
+     * @author [Yeferson Valencia, alejandro.yandd@gmail.com]
+     *
+     */
     move() {
         if (this.player == 1) {
             if (keyIsDown(87)) {
@@ -61,6 +98,15 @@ class player {
         }
     }
 
+    /**
+     * [
+     *  contiene el metodo si choca la bolita del juego donde se comparan posiciones
+     * ]
+     * @version [1,0.0]
+     *
+     * @author [Yeferson Valencia, alejandro.yandd@gmail.com]
+     *
+     */
     collision() {
         if (this.y >= this.limitDown - this.height) {
             this.y = this.limitDown - this.height;
