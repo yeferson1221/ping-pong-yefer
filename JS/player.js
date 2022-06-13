@@ -37,7 +37,7 @@ class Player {
 
     /**
      * [
-     *  contiene el llamdado metodo  para pintar el movimiento y la collicion fill blanco
+     *  contiene el llamado de los metodos  para pintar el movimiento y la collicion fill blanco
      * ]
      * @version [1,0.0]
      *

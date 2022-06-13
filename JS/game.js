@@ -42,6 +42,15 @@
          this.showScore();
      }
 
+     /**
+      * [
+      *  el metodo para calcular el puntaje  a ir sumando cuando se estrelle la bolita 
+      * ]
+      * @version [1,0.0]
+      *
+      * @author [Yeferson Valencia, alejandro.yandd@gmail.com]
+      */
+
      score() {
          if (ball.getX() < player1.getX()) {
              player2.setScore(1);
@@ -53,12 +62,28 @@
          }
      }
 
+     /**
+      * [
+      *  el metodo para mostrar en pantalla el puntaje ganado  
+      * ]
+      * @version [1,0.0]
+      *
+      * @author [Yeferson Valencia, alejandro.yandd@gmail.com]
+      */
      showScore() {
          textSize(30);
          text(player1.getScore(), 100, 70);
          text(player2.getScore(), 1150, 70);
      }
 
+     /**
+      * [
+      *  el metodo nos reinicia el juego
+      * ]
+      * @version [1,0.0]
+      *
+      * @author [Yeferson Valencia, alejandro.yandd@gmail.com]
+      */
      restart() {
          random = Math.random();
          ball.setX(innerWidth / 2);
